@@ -3,919 +3,233 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Altra Black and White Business Trading</title>
-
-  <meta
-    name="description"
-    content="Altra Black and White Business Trading - Digital business, technology and financial technology solutions."
-  >
+  <title>Altra</title>
 
   <style>
-
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: Arial, sans-serif;
       background: #f5f8ff;
-      color: #172033;
-      line-height: 1.6;
+      color: #102a56;
     }
-
-    /* HEADER */
 
     header {
-      background: #071a3d;
-      color: white;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
-    }
-
-    .header-container {
-      max-width: 1150px;
-      margin: auto;
-      padding: 12px 20px;
+      background: #ffffff;
+      padding: 18px 7%;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
     }
 
-    .brand {
+    .logo {
       display: flex;
       align-items: center;
+      gap: 10px;
+      font-size: 24px;
+      font-weight: bold;
+      color: #1455d9;
     }
 
-    .main-logo {
-      width: 210px;
-      height: auto;
-      display: block;
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 22px;
+    .logo img {
+      width: 45px;
+      height: 45px;
+      object-fit: contain;
     }
 
     nav a {
-      color: white;
+      margin-left: 25px;
       text-decoration: none;
+      color: #102a56;
       font-weight: 600;
-      transition: 0.3s;
     }
-
-    nav a:hover {
-      color: #b9d7ff;
-    }
-
-    .menu-button {
-      display: none;
-      background: transparent;
-      border: none;
-      color: white;
-      font-size: 30px;
-      cursor: pointer;
-    }
-
-    /* HERO */
 
     .hero {
-      min-height: 82vh;
+      min-height: 75vh;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-
-      background:
-        linear-gradient(
-          rgba(7, 26, 61, 0.94),
-          rgba(7, 26, 61, 0.94)
-        );
-
-      color: white;
-      padding: 80px 20px;
+      padding: 60px 20px;
+      background: linear-gradient(135deg, #eaf1ff, #ffffff);
     }
 
     .hero-content {
-      max-width: 850px;
+      max-width: 750px;
     }
 
-    .hero h2 {
+    .hero h1 {
       font-size: 52px;
-      line-height: 1.15;
-      margin-bottom: 25px;
+      margin-bottom: 20px;
+      color: #124fc4;
     }
 
     .hero p {
       font-size: 19px;
-      color: #dce9ff;
-      max-width: 700px;
-      margin: 0 auto 30px;
+      line-height: 1.7;
+      margin-bottom: 30px;
+      color: #4d5d75;
     }
 
     .button {
       display: inline-block;
-      padding: 14px 28px;
-      margin: 5px;
+      padding: 14px 30px;
+      background: #1455d9;
+      color: white;
+      text-decoration: none;
       border-radius: 30px;
-      background: white;
-      color: #071a3d;
-      text-decoration: none;
       font-weight: bold;
-      transition: 0.3s;
     }
 
-    .button:hover {
-      transform: translateY(-2px);
-    }
-
-    .button-blue {
-      background: #1d5fd1;
-      color: white;
-    }
-
-    /* GENERAL SECTIONS */
-
-    section {
-      padding: 80px 20px;
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    .section-title {
+    .section {
+      padding: 70px 8%;
       text-align: center;
-      color: #071a3d;
-      font-size: 38px;
-      margin-bottom: 15px;
-    }
-
-    .section-subtitle {
-      text-align: center;
-      max-width: 700px;
-      margin: 0 auto 45px;
-      color: #667085;
-    }
-
-    /* ABOUT */
-
-    .about {
       background: white;
     }
 
-    .about-text {
-      max-width: 850px;
-      margin: auto;
-      text-align: center;
-      font-size: 18px;
-      color: #4b5568;
-    }
-
-    /* CARDS */
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
-    }
-
-    .card {
-      background: white;
-      padding: 32px 25px;
-      border-radius: 18px;
-      text-align: center;
-      box-shadow: 0 8px 25px rgba(7, 26, 61, 0.08);
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .card-icon {
+    .section h2 {
       font-size: 32px;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
+      color: #124fc4;
     }
 
-    .card h3 {
-      color: #071a3d;
-      margin-bottom: 10px;
-    }
-
-    .card p {
-      color: #667085;
-    }
-
-    /* ALTRA FLOAT */
-
-    .float-section {
-      background: #071a3d;
-      color: white;
-    }
-
-    .float-section .section-title {
-      color: white;
-    }
-
-    .float-section .section-subtitle {
-      color: #cbd9f2;
-    }
-
-    .float-card {
-      background: rgba(255, 255, 255, 0.07);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-    }
-
-    .float-card h3 {
-      color: white;
-    }
-
-    .float-card p {
-      color: #cbd9f2;
-    }
-
-    /* WHY ALTRA */
-
-    .why {
-      background: #eef4ff;
-    }
-
-    .why-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-    }
-
-    .why-item {
-      background: white;
-      padding: 25px 18px;
-      border-radius: 16px;
-      text-align: center;
-    }
-
-    .why-item h3 {
-      color: #071a3d;
-      margin-bottom: 8px;
-    }
-
-    .why-item p {
-      color: #667085;
-      font-size: 14px;
-    }
-
-    /* MISSION */
-
-    .mission-vision {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 25px;
-    }
-
-    .mission-box {
-      background: white;
-      padding: 35px;
-      border-radius: 18px;
-      box-shadow: 0 8px 25px rgba(7, 26, 61, 0.08);
-    }
-
-    .mission-box h3 {
-      color: #071a3d;
-      font-size: 25px;
-      margin-bottom: 12px;
-    }
-
-    .mission-box p {
-      color: #667085;
-    }
-
-    /* CONTACT */
-
-    .contact {
-      background: white;
-    }
-
-    .contact-box {
-      max-width: 850px;
+    .section p {
+      max-width: 700px;
       margin: auto;
-      background: #071a3d;
-      color: white;
-      padding: 45px 30px;
-      border-radius: 22px;
-      text-align: center;
+      line-height: 1.7;
+      color: #59687d;
     }
 
-    .contact-box h2 {
-      font-size: 35px;
-      margin-bottom: 15px;
-    }
-
-    .contact-box p {
-      color: #cbd9f2;
-      margin-bottom: 25px;
-    }
-
-    .contact-links {
+    .services {
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
-      gap: 12px;
+      gap: 25px;
+      flex-wrap: wrap;
+      margin-top: 35px;
     }
 
-    .contact-links a {
-      color: white;
-      text-decoration: none;
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      padding: 12px 18px;
-      border-radius: 25px;
-      transition: 0.3s;
+    .service {
+      width: 250px;
+      padding: 30px 20px;
+      background: #f5f8ff;
+      border-radius: 18px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.06);
     }
 
-    .contact-links a:hover {
-      background: white;
-      color: #071a3d;
+    .service h3 {
+      margin-bottom: 12px;
+      color: #1455d9;
     }
-
-    /* FOOTER */
 
     footer {
-      background: #041127;
-      color: #b9c5da;
-      text-align: center;
-      padding: 30px 20px;
-    }
-
-    footer strong {
+      background: #102a56;
       color: white;
-    }
-
-    /* MOBILE */
-
-    @media (max-width: 850px) {
-
-      .cards {
-        grid-template-columns: 1fr;
-      }
-
-      .why-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .mission-vision {
-        grid-template-columns: 1fr;
-      }
-
-      .hero h2 {
-        font-size: 42px;
-      }
+      text-align: center;
+      padding: 25px;
     }
 
     @media (max-width: 700px) {
-
-      .header-container {
-        padding: 10px 15px;
-      }
-
-      .main-logo {
-        width: 175px;
-      }
-
-      .menu-button {
-        display: block;
-      }
-
-      nav {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: #071a3d;
+      header {
         flex-direction: column;
-        padding: 22px;
-        gap: 18px;
+        gap: 15px;
       }
 
-      nav.show {
-        display: flex;
+      nav a {
+        margin: 0 7px;
       }
 
-      .hero {
-        min-height: 75vh;
-        padding: 65px 20px;
-      }
-
-      .hero h2 {
-        font-size: 36px;
-      }
-
-      .hero p {
-        font-size: 17px;
-      }
-
-      section {
-        padding: 60px 18px;
-      }
-
-      .section-title {
-        font-size: 31px;
-      }
-
-      .why-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .contact-box h2 {
-        font-size: 29px;
+      .hero h1 {
+        font-size: 38px;
       }
     }
-
   </style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
-
   <header>
-
-    <div class="header-container">
-
-      <div class="brand">
-
-        <img
-          src="logo.svg"
-          alt="Altra Black and White Business Trading"
-          class="main-logo">
-
-      </div>
-
-      <button
-        class="menu-button"
-        onclick="toggleMenu()">
-        ☰
-      </button>
-
-      <nav id="mainNav">
-
-        <a href="#home">Home</a>
-
-        <a href="#about">About</a>
-
-        <a href="#services">Services</a>
-
-        <a href="#float">Altra Float</a>
-
-        <a href="#contact">Contact</a>
-
-      </nav>
-
+    <div class="logo">
+      <img src="logo.svg" alt="Altra Logo">
+      Altra
     </div>
 
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-
-  <!-- HOME -->
-
   <section class="hero" id="home">
-
     <div class="hero-content">
-
-      <h2>
-        Building Digital Solutions for Tomorrow
-      </h2>
+      <h1>Welcome to Altra</h1>
 
       <p>
-        Altra Black and White Business Trading is focused on
-        technology, digital business solutions and innovative
-        financial technology.
+        Smart digital solutions designed to make everyday transactions
+        simpler, faster and more convenient.
       </p>
 
-      <a href="#services" class="button">
-        Explore Our Services
-      </a>
-
-      <a href="#contact" class="button button-blue">
-        Contact Altra
-      </a>
-
+      <a href="#services" class="button">Get Started</a>
     </div>
-
   </section>
 
+  <section class="section" id="about">
+    <h2>About Altra</h2>
 
-  <!-- ABOUT -->
-
-  <section class="about" id="about">
-
-    <div class="container">
-
-      <h2 class="section-title">
-        About Altra
-      </h2>
-
-      <p class="section-subtitle">
-        Technology and business working together to create
-        practical digital solutions.
-      </p>
-
-      <p class="about-text">
-        Altra Black and White Business Trading is a business
-        focused on developing and supporting modern digital
-        solutions. Our goal is to make technology easier,
-        more accessible and useful for businesses and individuals.
-      </p>
-
-    </div>
-
+    <p>
+      Altra is focused on building simple and innovative digital solutions
+      that help people and businesses manage their everyday activities
+      with greater convenience.
+    </p>
   </section>
 
+  <section class="section" id="services">
+    <h2>Our Services</h2>
 
-  <!-- SERVICES -->
+    <div class="services">
 
-  <section id="services">
-
-    <div class="container">
-
-      <h2 class="section-title">
-        Our Services
-      </h2>
-
-      <p class="section-subtitle">
-        Solutions designed to support modern businesses
-        and digital users.
-      </p>
-
-      <div class="cards">
-
-        <div class="card">
-
-          <div class="card-icon">
-            💻
-          </div>
-
-          <h3>
-            Technology Solutions
-          </h3>
-
-          <p>
-            Digital technology solutions designed to help
-            businesses improve their operations and services.
-          </p>
-
-        </div>
-
-
-        <div class="card">
-
-          <div class="card-icon">
-            📱
-          </div>
-
-          <h3>
-            Digital Business
-          </h3>
-
-          <p>
-            Modern digital tools and services that help
-            businesses connect with customers and grow.
-          </p>
-
-        </div>
-
-
-        <div class="card">
-
-          <div class="card-icon">
-            💳
-          </div>
-
-          <h3>
-            Financial Technology
-          </h3>
-
-          <p>
-            Innovative technology solutions designed around
-            digital transactions and financial services.
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- ALTRA FLOAT -->
-
-  <section class="float-section" id="float">
-
-    <div class="container">
-
-      <h2 class="section-title">
-        Altra Float
-      </h2>
-
-      <p class="section-subtitle">
-        A digital application being developed under
-        Altra Black and White Business Trading.
-      </p>
-
-      <div class="cards">
-
-        <div class="card float-card">
-
-          <div class="card-icon">
-            💰
-          </div>
-
-          <h3>
-            Digital Transactions
-          </h3>
-
-          <p>
-            Supporting convenient digital transaction
-            experiences.
-          </p>
-
-        </div>
-
-
-        <div class="card float-card">
-
-          <div class="card-icon">
-            📊
-          </div>
-
-          <h3>
-            Business Solutions
-          </h3>
-
-          <p>
-            Technology designed to support businesses
-            operating in the digital financial space.
-          </p>
-
-        </div>
-
-
-        <div class="card float-card">
-
-          <div class="card-icon">
-            ✨
-          </div>
-
-          <h3>
-            Simple Experience
-          </h3>
-
-          <p>
-            Focused on making digital services simple
-            and easy to use.
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- WHY ALTRA -->
-
-  <section class="why">
-
-    <div class="container">
-
-      <h2 class="section-title">
-        Why Altra?
-      </h2>
-
-      <p class="section-subtitle">
-        Our approach is built around practical technology
-        and business growth.
-      </p>
-
-      <div class="why-grid">
-
-        <div class="why-item">
-
-          <h3>
-            Innovation
-          </h3>
-
-          <p>
-            Exploring new ways to solve modern problems.
-          </p>
-
-        </div>
-
-
-        <div class="why-item">
-
-          <h3>
-            Simplicity
-          </h3>
-
-          <p>
-            Creating solutions that are easier to understand
-            and use.
-          </p>
-
-        </div>
-
-
-        <div class="why-item">
-
-          <h3>
-            Business Focus
-          </h3>
-
-          <p>
-            Building technology with real business needs
-            in mind.
-          </p>
-
-        </div>
-
-
-        <div class="why-item">
-
-          <h3>
-            Growth
-          </h3>
-
-          <p>
-            Supporting businesses as they move into
-            the digital future.
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- MISSION AND VISION -->
-
-  <section>
-
-    <div class="container">
-
-      <h2 class="section-title">
-        Mission & Vision
-      </h2>
-
-      <p class="section-subtitle">
-        What Altra is working toward.
-      </p>
-
-      <div class="mission-vision">
-
-        <div class="mission-box">
-
-          <h3>
-            Our Mission
-          </h3>
-
-          <p>
-            To develop practical digital solutions that
-            help businesses and individuals participate
-            more effectively in the digital economy.
-          </p>
-
-        </div>
-
-
-        <div class="mission-box">
-
-          <h3>
-            Our Vision
-          </h3>
-
-          <p>
-            To build innovative technology solutions that
-            connect people, businesses and digital services.
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- CONTACT -->
-
-  <section class="contact" id="contact">
-
-    <div class="container">
-
-      <div class="contact-box">
-
-        <h2>
-          Ready to Connect with Altra?
-        </h2>
-
+      <div class="service">
+        <h3>Digital Solutions</h3>
         <p>
-          Contact us to learn more about our business,
-          digital solutions and Altra Float.
+          Modern tools designed to support individuals and businesses.
         </p>
+      </div>
 
-        <div class="contact-links">
+      <div class="service">
+        <h3>Transactions</h3>
+        <p>
+          Simple and convenient ways to manage everyday transactions.
+        </p>
+      </div>
 
-          <a href="mailto:altrabwtb701@gmail.com">
-            📧 Email
-          </a>
-
-          <a href="tel:+233504415643">
-            📞 Phone
-          </a>
-
-          <a
-            href="https://wa.me/233504415643"
-            target="_blank">
-            💬 WhatsApp
-          </a>
-
-        </div>
-
+      <div class="service">
+        <h3>Smart Technology</h3>
+        <p>
+          Technology focused on making digital experiences easier.
+        </p>
       </div>
 
     </div>
-
   </section>
 
+  <section class="section" id="contact">
+    <h2>Contact Altra</h2>
 
-  <!-- FOOTER -->
+    <p>
+      Get in touch with us to learn more about Altra and our digital
+      solutions.
+    </p>
+  </section>
 
   <footer>
-
-    <p>
-      ©️ 2026
-      <strong>
-        Altra Black and White Business Trading
-      </strong>
-      . All rights reserved.
-    </p>
-
-    <p>
-      Altra Float is a digital application under Altra.
-    </p>
-
+    ©️ 2026 Altra. All rights reserved.
   </footer>
-
-
-  <!-- JAVASCRIPT -->
-
-  <script>
-
-    function toggleMenu() {
-
-      const nav =
-        document.getElementById("mainNav");
-
-      nav.classList.toggle("show");
-
-    }
-
-    const navLinks =
-      document.querySelectorAll("#mainNav a");
-
-    navLinks.forEach(function(link) {
-
-      link.addEventListener("click", function() {
-
-        document
-          .getElementById("mainNav")
-          .classList.remove("show");
-
-      });
-
-    });
-
-  </script>
 
 </body>
 </html>
